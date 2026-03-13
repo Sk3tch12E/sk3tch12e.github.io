@@ -1,54 +1,550 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Brown Bears</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Maddocks | Senior Game Dev & Systems Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Hides header at the very top, shows it as soon as you scroll 1px */
+        nav { transition: transform 0.3s ease, opacity 0.3s ease; }
+        .nav-hidden { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+    </style>
 </head>
+<body class="font-sans">
+	<!-- Navigation bar -->
+    <nav id="main-nav" class="nav-hidden fixed w-full z-50 top-0 left-0 border-b border-white/10 backdrop-blur-md bg-slate-950/80">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex flex-col justify-center">
+                    <a href="#" class="text-2xl font-bold tracking-tight text-white hover:text-sky-400 transition-colors leading-none">
+                        Joshua Maddocks
+                    </a>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-sky-500 font-bold mt-1 hidden sm:block">
+                        Senior Game Developer & Tech Lead
+                    </span>
+                </div>
 
-<body>
-  <nav>
-    <a href="./index.html">Brown Bear</a>
-    <a href="./aboutme.html">About Me</a>
-  </nav>
-  <h1>The Brown Bear</h1>
-  <nav>
-    <ul>
-      <li><a href="#introduction">Introduction</a></li>
-      <li><a href="#habitat">Habitat</a></li>
-      <li><a href="#media">Media</a></li>
-    </ul>
-  </nav>
-  <div id="introduction">
-    <h2>About Brown Bears</h2>
-    <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the
-      Atlas bear and the Himalayan brown bear.</p>
-    <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">Learn More</a>
-    <h3>Species</h3>
-    <ul>
-      <li>Arctos</li>
-      <li>Collarus</li>
-      <li>Horribilis</li>
-      <li>Nelsoni (extinct)</li>
-    </ul>
-    <h3>Features</h3>
-    <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
-  </div>
-  <div id="habitat">
-    <h2>Habitat</h2>
-    <h3>Countries with Large Brown Bear Populations</h3>
-    <ol>
-      <li>Russia</li>
-      <li>United States</li>
-      <li>Canada</li>
-    </ol>
-    <h3>Countries with Small Brown Bear Populations</h3>
-    <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
-  </div>
-  <div id="media">
-    <h2>Media</h2>
-    <img src="https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg" />
-    <video src="https://content.codecademy.com/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" height="240" width="320" controls>Video not supported</video>
-  </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#about" class="text-slate-300 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-all">About Me</a>
+                    <a href="#projects" class="text-slate-300 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-all">Projects</a>
+                    <a href="#cd-rack" class="text-slate-300 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-all">CD Rack</a>
+                    <a href="#cool-things" class="text-slate-300 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-all">Cool Things</a>
+                    <div class="h-6 w-[1px] bg-slate-700 mx-2"></div>
+                    <a href="#contact" class="ml-2 bg-sky-600 hover:bg-sky-500 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-sky-900/20 active:scale-95">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+	<!-- Home Area -->
+    <section class="min-h-screen flex items-center px-4 md:px-8 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full">
+            
+            <div class="text-left order-2 md:order-1">
+                <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-tighter">
+                    I'm <span class="gradient-text">Josh</span>
+                </h1>
+                <p class="text-xl text-slate-400 mb-10 leading-relaxed max-w-lg">
+                    Senior Unity Developer & Systems Architect. <br>
+                    5 years of professional leadership building award-winning games and bespoke enterprise infrastructure.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="bg-sky-600 hover:bg-sky-500 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-sky-900/20 active:scale-95">
+                            View My Work
+                        </a>
+                        <a href="https://github.com/Sk3tch12E" target="_blank" class="border border-slate-700 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-bold transition-all">
+                            GitHub
+                        </a>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#about" class="bg-slate-800/40 hover:bg-slate-700 text-slate-200 px-6 py-3 rounded-lg text-sm font-semibold border border-slate-700/50 transition-all">
+                            About Me
+                        </a>
+                        <a href="#cd-rack" class="bg-slate-800/40 hover:bg-slate-700 text-slate-200 px-6 py-3 rounded-lg text-sm font-semibold border border-slate-700/50 transition-all">
+                            💿 CD Rack
+                        </a>
+                        <a href="#cool-things" class="bg-slate-800/40 hover:bg-slate-700 text-slate-200 px-6 py-3 rounded-lg text-sm font-semibold border border-slate-700/50 transition-all">
+                            Cool Stuff
+                        </a>
+                    </div>
+                </div>
+                
+                <p class="mt-10 text-xs text-slate-500 uppercase tracking-widest font-mono">
+                    Alias: Sk3tch12E
+                </p>
+            </div>
+
+            <div class="relative order-1 md:order-2 flex justify-center">
+                <div class="absolute inset-0 bg-sky-500/15 blur-[120px] rounded-full"></div>
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-indigo-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <img 
+                        src="./me.jpg" 
+                        alt="Josh Maddocks" 
+                        class="relative rounded-[2.5rem] w-80 h-80 md:w-[500px] md:h-[500px] object-[50%_25%] object-cover border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!-- About me -->
+	<section id="about" class="py-24 px-4 md:px-8 max-w-7xl mx-auto border-t border-white/5">
+    <div class="grid lg:grid-cols-5 gap-16">
+        
+        <div class="lg:col-span-2">
+            <h2 class="text-4xl font-bold mb-8">About <span class="text-sky-500">Me</span></h2>
+            <div class="space-y-6 text-slate-300 leading-relaxed text-lg">
+                <p>
+                    My journey started in a school IT lab discovering <span class="text-white font-semibold">Scratch</span>. This was before I had the chance to learn "real" programming, but it hooked me immediately. In school, I moved through Small Basic and Visual Basic before finally landing on <span class="text-white font-semibold">C#</span>, though by then, I’d already discovered it myself through Unity.
+                </p>
+                <p>
+                    Today, I’m a Senior Developer who thrives on technical complexity. Whether it's writing <span class="text-sky-400">custom netcode</span> or architecting <span class="text-sky-400">enterprise software</span> from scratch, I focus on building tools that solve real problems.
+                </p>
+                <p>
+                    Outside of IDEs, you'll usually find me climbing, looking after my crested gecko, or listening to music. (Actually, I’m probably listening to music no matter what else I’m doing.)
+                </p>
+                
+                <div class="pt-6">
+                    <div class="bg-slate-800/30 p-6 rounded-2xl border border-white/5 backdrop-blur-sm">
+                        <h4 class="text-sky-500 font-bold text-sm uppercase tracking-widest mb-4">Core Competencies</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-900 px-3 py-1 rounded-md text-sm border border-slate-700">Unity / C#</span>
+                            <span class="bg-slate-900 px-3 py-1 rounded-md text-sm border border-slate-700">C++ / Graphics</span>
+                            <span class="bg-slate-900 px-3 py-1 rounded-md text-sm border border-slate-700">Netcode</span>
+                            <span class="bg-slate-900 px-3 py-1 rounded-md text-sm border border-slate-700">Systems Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-3">
+            <h3 class="text-2xl font-bold mb-10 flex items-center gap-3 italic">
+                <span class="h-px w-12 bg-sky-500"></span> The Roadmap
+            </h3>
+            
+            <div class="relative space-y-10 ml-4 border-l-2 border-slate-800 pb-4">
+                
+                <div class="relative pl-10">
+                    <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-sky-500 shadow-[0_0_20px_#0ea5e9] border-4 border-slate-950"></div>
+                    <p class="text-sky-500 font-black text-xs tracking-tighter mb-1">2026</p>
+                    <h4 class="text-white font-bold text-xl uppercase">Enterprise Systems Architect</h4>
+                    <p class="text-slate-400 text-sm mt-2">
+                        Developing <span class="text-slate-200">PC Controller & VMix Integration</span>—bespoke internal software for managing store infrastructure and digital signage.
+                    </p>
+                </div>
+
+                <div class="relative pl-10">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-sky-600 border-2 border-slate-950"></div>
+                    <p class="text-sky-600 font-bold text-xs mb-1">2025</p>
+                    <h4 class="text-white font-bold text-lg">Steam Launch</h4>
+                    <p class="text-slate-400 text-sm mt-1">Released <span class="text-slate-200">Warranty Not Included</span>, marking my first commercial Steam title launch.</p>
+                </div>
+
+                <div class="relative pl-10">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-emerald-500 shadow-[0_0_15px_#10b981] border-2 border-slate-950"></div>
+                    <p class="text-emerald-500 font-bold text-xs mb-1">2023</p>
+                    <h4 class="text-white font-bold text-lg">Award-Winning VR</h4>
+                    <p class="text-slate-400 text-sm mt-1">
+                        Released <span class="text-slate-200 italic">Safer Kids</span>. Awarded for <span class="text-emerald-400 font-semibold">Innovative Use of Technology</span>.
+                    </p>
+                </div>
+
+                <div class="relative pl-10">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-700 border-2 border-slate-950"></div>
+                    <p class="text-slate-500 font-bold text-xs mb-1">2021</p>
+                    <h4 class="text-white font-bold text-lg">BSc (Hons) Games Software Engineering</h4>
+                    <p class="text-slate-400 text-sm mt-1">
+                        Graduated Bournemouth University. Developed <span class="text-slate-200">RocketSmash</span>, building custom netcode using Websockets.
+                    </p>
+                </div>
+
+                <div class="relative pl-10">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-700 border-2 border-slate-950"></div>
+                    <p class="text-slate-500 font-bold text-xs mb-1">2020</p>
+                    <h4 class="text-white font-bold text-lg">ARGGE Engine</h4>
+                    <p class="text-slate-400 text-sm mt-1">Architected a custom C++ game engine with an input system and PBR graphics from scratch.</p>
+                </div>
+
+                <div class="relative pl-10">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-800 border-2 border-slate-950"></div>
+                    <p class="text-slate-600 font-bold text-xs mb-1">2017 — 2018</p>
+                    <h4 class="text-white/80 font-bold text-lg italic">Of Game and Conquer</h4>
+                    <p class="text-slate-500 text-sm mt-1">Implemented toroidal arrays for a complex cellular automata game based on Conway’s Game of Life.</p>
+                </div>
+
+                <div class="relative pl-10">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-slate-900 border-2 border-slate-950"></div>
+                    <p class="text-slate-700 font-bold text-xs mb-1">2012</p>
+                    <h4 class="text-white/40 font-bold text-lg">The Spark</h4>
+                    <p class="text-slate-600 text-sm mt-1 italic">First lines of code. Self-teaching Unity through trial, error, and curiosity.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+	</section>
+
+	<!-- Projects -->
+	<section id="projects" class="py-24 px-4 md:px-8 max-w-7xl mx-auto border-t border-white/5">
+		<div class="mb-16">
+			<h2 class="text-4xl font-bold mb-4">Selected <span class="text-sky-500">Work</span></h2>
+			<p class="text-slate-400 max-w-2xl text-lg">
+				From custom game engines built from scratch to networked multiplayer experiences.
+			</p>
+		</div>
+
+		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+			
+			<div class="card group rounded-2xl overflow-hidden p-1 flex flex-col h-full bg-slate-900/50 border border-slate-800 hover:border-sky-500/50 transition-all duration-300">
+				<div class="aspect-video rounded-xl bg-slate-800 overflow-hidden relative">
+					<div class="absolute inset-0 flex items-center justify-center text-slate-600 font-bold uppercase tracking-widest italic">RocketSmash</div>
+					<div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
+				</div>
+				<div class="p-6 flex flex-col flex-grow">
+					<div class="flex justify-between items-start mb-3">
+						<h3 class="text-xl font-bold text-white group-hover:text-sky-400 transition-colors">RocketSmash</h3>
+						<span class="text-[10px] bg-sky-500/10 text-sky-400 px-2 py-1 rounded border border-sky-500/20 font-bold uppercase">Networking</span>
+					</div>
+					<p class="text-slate-400 text-sm mb-6 flex-grow">
+						A Super Smash-inspired networked multiplayer game where players use rocket launchers to knock opponents off the map. Developed as a final year university project focusing on low-latency synchronization and physics.
+					</p>
+					<div class="flex flex-wrap gap-2 mb-6">
+						<span class="text-[10px] text-slate-400 bg-slate-800 px-2 py-1 rounded">Unity</span>
+						<span class="text-[10px] text-slate-400 bg-slate-800 px-2 py-1 rounded">C#</span>
+						<span class="text-[10px] text-slate-400 bg-slate-800 px-2 py-1 rounded">Netcode</span>
+					</div>
+					<a href="#" class="text-sky-400 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+						View Project Case Study <span>→</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="card group rounded-2xl overflow-hidden p-1 flex flex-col h-full bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 transition-all duration-300">
+				<div class="aspect-video rounded-xl bg-slate-800 overflow-hidden relative">
+					<div class="absolute inset-0 flex items-center justify-center text-slate-600 font-bold uppercase tracking-widest italic">ARGGE Engine</div>
+				</div>
+				<div class="p-6 flex flex-grow flex-col">
+					<div class="flex justify-between items-start mb-3">
+						<h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">ARGGE Engine</h3>
+						<span class="text-[10px] bg-indigo-500/10 text-indigo-400 px-2 py-1 rounded border border-indigo-500/20 font-bold uppercase">Engine Dev</span>
+					</div>
+					<p class="text-slate-400 text-sm mb-6 flex-grow">
+						A custom-built game engine developed in Year 3. This project involved architecting core systems, including rendering pipelines, memory management, and entity structures from the ground up.
+					</p>
+					<div class="flex flex-wrap gap-2 mb-6">
+						<span class="text-[10px] text-slate-400 bg-slate-800 px-2 py-1 rounded">C++</span>
+						<span class="text-[10px] text-slate-400 bg-slate-800 px-2 py-1 rounded">Graphics</span>
+						<span class="text-[10px] text-slate-400 bg-slate-800 px-2 py-1 rounded">Architecture</span>
+					</div>
+					<a href="#" class="text-indigo-400 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+						View Technical Breakdown <span>→</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="card group rounded-2xl overflow-hidden p-1 flex flex-col h-full bg-slate-900/50 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300">
+				<div class="aspect-video rounded-xl bg-slate-800 overflow-hidden relative">
+					<div class="absolute inset-0 flex items-center justify-center text-slate-600 font-bold uppercase tracking-widest italic">Legacy Work</div>
+				</div>
+				<div class="p-6 flex flex-grow flex-col">
+					<div class="flex justify-between items-start mb-3">
+						<h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">Of Game and Conquer</h3>
+						<span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded border border-emerald-500/20 font-bold uppercase">Legacy</span>
+					</div>
+					<p class="text-slate-400 text-sm mb-6 flex-grow">
+						A significant "Pre-University" project that demonstrated early mastery of Unity and game loop logic. This serves as the bridge between my self-taught years and formal engineering education.
+					</p>
+					<div class="flex flex-wrap gap-2 mb-6">
+						<span class="text-[10px] text-slate-400 bg-slate-800 px-2 py-1 rounded">Unity</span>
+						<span class="text-[10px] text-slate-400 bg-slate-800 px-2 py-1 rounded">C#</span>
+						<span class="text-[10px] text-slate-400 bg-slate-800 px-2 py-1 rounded">Early Work</span>
+					</div>
+					<span class="text-slate-600 font-bold text-sm italic">Historical Project</span>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- CD Rack -->
+	<section id="cd-rack" class="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+    <div class="mb-12">
+        <h2 class="text-4xl font-bold mb-2">My <span class="text-sky-500 text-5xl">CD Rack</span></h2>
+        <p class="text-slate-400">An interactive collection of the physical media I own.</p>
+    </div>
+
+    <div id="cd-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        </div>
+	</section>
+	<!-- CD Rack Styles and scripts START -->
+	<style>
+	/* Empty Jewel Case */
+	.border-dashed {
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='4' ry='4' stroke='%23334155FF' stroke-width='2' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    }
+
+    /* Jewel Case Container */
+    .jewel-case {
+        position: relative;
+        transition: transform 0.15s ease-out; /* Smooth follow-through */
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+
+    /* The actual box that tilts */
+    .jewel-box {
+        position: relative;
+        transition: transform 0.1s ease-out;
+        /* These variables are updated by JS */
+        transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    }
+
+    .jewel-case:hover .jewel-box {
+        z-index: 50;
+    }
+
+    /* Plastic Shine overlay */
+    .jewel-overlay {
+        position: absolute;
+        inset: 0;
+        /* Dynamic gradient based on tilt for "lighting" effect */
+        background: linear-gradient(
+            var(--angle, 125deg), 
+            rgba(255,255,255,0.1) 0%, 
+            rgba(255,255,255,0) 50%, 
+            rgba(255,255,255,0.05) 100%
+        );
+        border-radius: 4px;
+        pointer-events: none;
+    }
+	</style>
+
+	<!-- Edit List of CDs here -->
+	<script>
+    // --- EASY ADD SECTION ---
+    // Simply add a new { title: "", artist: "", cover: "" } to this list!
+    const myCDs = [
+    { 
+        title: "Essentials", 
+        artist: "As December Falls", 
+        cover: "./CD Covers/As Decemeber Falls - Essentials.webp",
+        spine: "#111111" 
+    },
+    { 
+        title: "Everything's on Fire, But I'm Fine", 
+        artist: "As December Falls", 
+        cover: "./CD Covers/As Decemeber Falls - Everythings On Fire But Im Fine.webp",
+        spine: "#e11d48"
+    },
+    { 
+        title: "Fireworks & Rollerblades", 
+        artist: "Benson Boone", 
+        cover: "./CD Covers/Benson Boone - Fireworks & Rollerblades.webp",
+        spine: "#7dd3fc"
+    },
+    { 
+        title: "Atmospherics", 
+        artist: "Hands Like Houses", 
+        cover: "./CD Covers/Hands Like Houses - Atmospherics.webp",
+        spine: "#cbd5e1"
+    },
+    { 
+        title: "From Zero", 
+        artist: "Linkin Park", 
+        cover: "./CD Covers/Linkin Park - From Zero.webp",
+        spine: "#db2777"
+    },
+    { 
+        title: "Minutes to Midnight", 
+        artist: "Linkin Park", 
+        cover: "./CD Covers/Linkin Park - Minutes To Midnight.webp",
+        spine: "#ffffff"
+    },
+    { 
+        title: "One More Light", 
+        artist: "Linkin Park", 
+        cover: "./CD Covers/Linkin Park - One More Light.webp",
+        spine: "#ffaaaa"
+    },
+    { 
+        title: "Materia", 
+        artist: "Miracle of Sound", 
+        cover: "./CD Covers/Miracle Of Sound - Materia.webp",
+        spine: "#2dd4bf"
+    },
+    { 
+        title: "Human", 
+        artist: "Rag'n'Bone Man", 
+        cover: "./CD Covers/Rag n Bone Man - Human.webp",
+        spine: "#78350f"
+    },
+    { 
+        title: "Up to Now", 
+        artist: "Snow Patrol", 
+        cover: "./CD Covers/Snow Patrol - Up To Now.webp",
+        spine: "#1e293b"
+    },
+    { 
+        title: "No Sound Without Silence", 
+        artist: "The Script", 
+        cover: "./CD Covers/The Script - No Sound Without Silence.webp",
+        spine: "#aaccf"
+    },
+    { 
+        title: "Idols", 
+        artist: "YUNGBLUD", 
+        cover: "./CD Covers/YungBlud - Idols.webp",
+        spine: "#ffffff"
+    }
+];
+
+    function renderCDs() {
+		const grid = document.getElementById('cd-grid');
+		
+		// 1. Render your actual CDs
+		let html = myCDs.map(cd => `
+			<div class="jewel-case group cursor-pointer" onmousemove="handleTilt(event, this)" onmouseleave="resetTilt(this)">
+				<div class="jewel-box">
+					<div class="relative shadow-2xl rounded-sm overflow-hidden aspect-square border border-white/10 bg-slate-800">
+						<img src="${cd.cover}" alt="${cd.title}" class="w-full h-full object-cover">
+						<div class="jewel-overlay"></div>
+						<div class="absolute left-0 top-0 bottom-0 w-2 opacity-30 border-r border-white/10" style="background-color: ${cd.spine}"></div>
+					</div>
+				</div>
+				<div class="mt-4">
+					<h3 class="text-sm font-bold text-white truncate group-hover:text-sky-400 transition-colors">${cd.title}</h3>
+					<p class="text-xs text-slate-500 truncate">${cd.artist}</p>
+				</div>
+			</div>
+		`).join('');
+
+		// 2. Add 12 Empty "Reserved" Slots
+		for (let i = 0; i < 12; i++) {
+			html += `
+				<div class="opacity-20">
+					<div class="aspect-square rounded-sm border-2 border-dashed border-slate-700 flex items-center justify-center">
+						<span class="text-slate-600 font-mono text-xs italic">Slot ${myCDs.length + i + 1}</span>
+					</div>
+					<div class="mt-4">
+						<div class="h-3 w-2/3 bg-slate-800 rounded mb-2"></div>
+						<div class="h-2 w-1/2 bg-slate-900 rounded"></div>
+					</div>
+				</div>
+			`;
+		}
+
+		grid.innerHTML = html;
+	}
+
+// THE TILT LOGIC
+function handleTilt(e, el) {
+    const box = el.querySelector('.jewel-box');
+    const rect = el.getBoundingClientRect();
+    
+    // Get mouse position relative to the card center
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    // Calculate rotation (Max 15 degrees)
+    const rotateX = ((y - centerY) / centerY) * -15; 
+    const rotateY = ((x - centerX) / centerX) * 15;
+    
+    // Apply to CSS Variables
+    box.style.setProperty('--rx', `${rotateX}deg`);
+    box.style.setProperty('--ry', `${rotateY}deg`);
+    
+    // Dynamic light angle based on mouse position
+    const angle = Math.atan2(y - centerY, x - centerX) * (180 / Math.PI);
+    box.querySelector('.jewel-overlay').style.setProperty('--angle', `${angle}deg`);
+}
+
+function resetTilt(el) {
+    const box = el.querySelector('.jewel-box');
+    box.style.setProperty('--rx', `0deg`);
+    box.style.setProperty('--ry', `0deg`);
+}
+
+    // Run the render
+    document.addEventListener('DOMContentLoaded', renderCDs);
+	</script>
+    <script>
+		const nav = document.getElementById('main-nav');
+        window.onscroll = function() {
+			if (window.pageYOffset > 50) {
+				nav.classList.remove('nav-hidden');
+            } else {
+				nav.classList.add('nav-hidden');
+            }
+        };
+	</script>
+	<!-- CD Rack Styles and scripts END -->
+
+	<!-- Cool stuff -->
+	<section id="cool-things" class="py-24 px-4 md:px-8 max-w-7xl mx-auto border-t border-white/5">
+		<div class="mb-16">
+			<h2 class="text-4xl font-bold mb-4 italic text-right">Cool <span class="text-sky-500 underline decoration-slate-700 underline-offset-8">Stuff</span></h2>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+			
+			<div class="md:col-span-2 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 border border-white/10 flex flex-col justify-between overflow-hidden relative group">
+				<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+					<svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+				</div>
+				<div class="relative z-10">
+					<span class="bg-sky-500/10 text-sky-400 text-xs font-bold px-3 py-1 rounded-full border border-sky-500/20 uppercase tracking-widest">Internal Tools</span>
+					<h3 class="text-3xl font-bold text-white mt-4 mb-2">PC & VMix Controller</h3>
+					<p class="text-slate-400 max-w-md">
+						Custom-built software for infrastructure management. Features integrated VMix controls for digital signage and real-time PC health monitoring across store locations.
+					</p>
+				</div>
+				<div class="flex gap-4 mt-6">
+					<div class="bg-slate-950/50 px-4 py-2 rounded-xl border border-white/5 text-xs text-slate-300">#Automation</div>
+					<div class="bg-slate-950/50 px-4 py-2 rounded-xl border border-white/5 text-xs text-slate-300">#Enterprise</div>
+				</div>
+			</div>
+
+			<div class="bg-slate-800/40 rounded-3xl p-8 border border-white/5 hover:border-sky-500/30 transition-all flex flex-col justify-end group overflow-hidden relative">
+				<div class="absolute inset-0 bg-slate-900 opacity-0 group-hover:opacity-40 transition-opacity"></div>
+				<div class="relative z-10">
+					<h3 class="text-xl font-bold text-white">Climbing</h3>
+					<p class="text-slate-400 text-sm mt-2">When I'm not coding, I'm usually at the bouldering gym solving physical puzzles.</p>
+				</div>
+			</div>
+
+			<div class="bg-emerald-500/5 rounded-3xl p-8 border border-emerald-500/10 hover:border-emerald-500/40 transition-all flex items-center gap-6 group">
+				<div class="w-16 h-16 rounded-full bg-emerald-500/20 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🦎</div>
+				<div>
+					<h3 class="text-xl font-bold text-white">Crested Gecko</h3>
+					<p class="text-slate-400 text-sm italic">Keeping the home office lively.</p>
+				</div>
+			</div>
+
+			<div class="md:col-span-2 bg-slate-900 rounded-3xl p-8 border border-white/10 flex items-center justify-between group">
+				<div class="max-w-xs">
+					<h3 class="text-xl font-bold text-white">Bespoke Auto-Updater</h3>
+					<p class="text-slate-400 text-sm mt-2">Developed a secure, custom update delivery system for enterprise deployments.</p>
+				</div>
+				<div class="h-12 w-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-sky-400"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
 </body>
-
 </html>
