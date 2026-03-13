@@ -1,4 +1,4 @@
-This is my portfolio website. 
+This is my portfolio website accessible through https://sk3tch12e.github.io/.
 
 
 
